@@ -22,6 +22,10 @@ jobs:
           --health-cmd="mysqladmin ping -h localhost -ppassword" --health-interval=10s --health-timeout=5s --health-retries=5
 
     steps:
+    - name: Check if Port 8084 is Available
+      run: |
+        netstat -tuln | grep ':8084' && exit 1 || exit 0
+
     - uses: actions/checkout@v2
 
     - name: Set up JDK 17
