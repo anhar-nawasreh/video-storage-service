@@ -46,5 +46,5 @@ jobs:
     - name: Run video storage Service Docker Container
       run: |
         docker network create video-network
-        docker run --network video-network --name video_storage_service -e SPRING_DATASOURCE_URL=jdbc:mysql://host.docker.internal:3308/vide_DB?useSSL=false -e SPRING_DATASOURCE_USERNAME=root -e SPRING_DATASOURCE_PASSWORD=admin -d -p 8084:8084 video-storage-service:latest
+        docker run --network video-network --name video_storage_service -e SPRING_DATASOURCE_URL=jdbc:mysql://host.docker.internal:3306/vide_DB?useSSL=false -e SPRING_DATASOURCE_USERNAME=root -e SPRING_DATASOURCE_PASSWORD=admin -d -p 8084:8084 video-storage-service:latest
 
