@@ -1,4 +1,4 @@
-name: CI/CD Pipeline for Authentication Service
+name: CI/CD Pipeline for video storage Service
 
 on:
   push:
